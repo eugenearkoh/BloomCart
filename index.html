@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BloomCart — Beautiful flowers and thoughtful gifts for every occasion.">
+  <title>BloomCart | Flowers & Gifts</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="navbar">
+    <a class="logo" href="#" aria-label="BloomCart home">Bloom<span>Cart.</span></a>
+
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#shop">Shop</a>
+      <a href="#about">Our Story</a>
+    </nav>
+
+    <div class="nav-actions">
+      <label class="search-box">
+        <span aria-hidden="true">⌕</span>
+        <input id="search-input" type="search" placeholder="Search flowers..." aria-label="Search products">
+      </label>
+
+      <button class="cart-button" id="cart-button" type="button" aria-label="Shopping cart">
+        🛍 <span class="cart-label">Cart</span>
+        <span id="cart-count" class="cart-count">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">FLOWERS THAT SPEAK FROM THE HEART</p>
+        <h1>Make their day<br> <span>beautiful.</span></h1>
+        <p class="hero-description">
+          Thoughtfully arranged flowers and meaningful gifts,
+          delivered with love for life's special moments.
+        </p>
+        <a class="primary-button" href="#shop">Explore collection <span>→</span></a>
+        <div class="hero-note">✿ Fresh blooms · Thoughtful gifts · Made with love</div>
+      </div>
+
+      <div class="hero-image">
+        <img
+          src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=1000&q=85"
+          alt="Beautiful fresh flowers in soft pink and pastel colours">
+        <div class="image-tag">
+          <span>✿</span>
+          <div><strong>A little joy</strong><small>In every bouquet</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits" aria-label="Our benefits">
+      <div><span>✿</span><p><strong>Fresh flowers</strong><small>Beautifully selected</small></p></div>
+      <div><span>♡</span><p><strong>Made with love</strong><small>Arranged with care</small></p></div>
+      <div><span>↗</span><p><strong>Easy shopping</strong><small>Find your perfect gift</small></p></div>
+    </section>
+
+    <section class="shop-section" id="shop">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">A LITTLE SOMETHING SPECIAL</p>
+          <h2>Find your <span>flowers.</span></h2>
+        </div>
+        <p>From everyday moments to unforgettable celebrations.</p>
+      </div>
+
+      <div class="category-filters" id="category-filters" aria-label="Filter products">
+        <button class="filter-button active" data-category="All" type="button">All gifts</button>
+        <button class="filter-button" data-category="Bouquets" type="button">Bouquets</button>
+        <button class="filter-button" data-category="Roses" type="button">Roses</button>
+        <button class="filter-button" data-category="Plants" type="button">Plants</button>
+        <button class="filter-button" data-category="Gifts" type="button">Gifts</button>
+      </div>
+
+      <div class="product-grid" id="product-grid" aria-live="polite"></div>
+      <p class="empty-message" id="empty-message" hidden>No products found. Try another search.</p>
+    </section>
+
+    <section class="story-section" id="about">
+      <div>
+        <p class="eyebrow">THE BLOOMCART PROMISE</p>
+        <h2>Little things can<br>mean <span>everything.</span></h2>
+      </div>
+      <p>
+        We believe flowers can brighten an ordinary day, celebrate a milestone,
+        or say what words cannot. Discover thoughtful blooms and gifts for
+        the people who matter most.
+      </p>
+      <a href="#shop" class="text-link">Find something lovely →</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="logo" href="#home">Bloom<span>Cart.</span></a>
+    <p>Thoughtful flowers. Meaningful moments.</p>
+    <small>© 2026 BloomCart. Demo storefront.</small>
+  </footer>
+
+  <div class="cart-overlay" id="cart-overlay" hidden>
+    <button class="overlay-backdrop" id="close-cart-backdrop" aria-label="Close cart"></button>
+    <aside class="cart-panel" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+      <div class="cart-header">
+        <h2 id="cart-title">Your basket <span id="cart-heading-count">(0)</span></h2>
+        <button id="close-cart" class="close-button" type="button" aria-label="Close cart">×</button>
+      </div>
+
+      <div id="cart-items" class="cart-items"></div>
+
+      <div class="cart-footer">
+        <div class="cart-total"><span>Total</span><strong id="cart-total">GH₵0.00</strong></div>
+        <button id="checkout-button" class="primary-button checkout-button" type="button">Continue to checkout →</button>
+        <p class="demo-note">Demo only — checkout and payments are not connected.</p>
+      </div>
+    </aside>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
